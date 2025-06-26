@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gautam-portfolio/static/css/main.687d21a0.css",
+    "main.js": "/gautam-portfolio/static/js/main.56af478e.js",
+    "index.html": "/gautam-portfolio/index.html",
+    "main.687d21a0.css.map": "/gautam-portfolio/static/css/main.687d21a0.css.map",
+    "main.56af478e.js.map": "/gautam-portfolio/static/js/main.56af478e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.687d21a0.css",
+    "static/js/main.56af478e.js"
+  ]
+}
