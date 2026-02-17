@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gautam-portfolio/static/css/main.687d21a0.css",
-    "main.js": "/gautam-portfolio/static/js/main.6bc37506.js",
+    "main.js": "/gautam-portfolio/static/js/main.f03d0de8.js",
     "index.html": "/gautam-portfolio/index.html",
     "main.687d21a0.css.map": "/gautam-portfolio/static/css/main.687d21a0.css.map",
-    "main.6bc37506.js.map": "/gautam-portfolio/static/js/main.6bc37506.js.map"
+    "main.f03d0de8.js.map": "/gautam-portfolio/static/js/main.f03d0de8.js.map"
   },
   "entrypoints": [
     "static/css/main.687d21a0.css",
-    "static/js/main.6bc37506.js"
+    "static/js/main.f03d0de8.js"
   ]
 }
