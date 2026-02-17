@@ -68,76 +68,73 @@ const SkillItem = styled.li`
 `;
 
 const Skills = () => {
-  return (
-    <SkillsWrapper>
-      <Title>Technical Skills</Title>
-
-      <SkillCategory>
-        <CategoryTitle><FaCode /> Programming Languages</CategoryTitle>
-        <SkillList>
-          <SkillItem>C</SkillItem>
-          <SkillItem>C++</SkillItem>
-          <SkillItem>Java</SkillItem>
-          <SkillItem>Python</SkillItem>
-          <SkillItem>Assembly Language</SkillItem>
-        </SkillList>
-      </SkillCategory>
-
-      <SkillCategory>
-        <CategoryTitle><FaGlobe /> Full Stack Development</CategoryTitle>
-        <SkillList>
-          <SkillItem>HTML</SkillItem>
-          <SkillItem>CSS</SkillItem>
-          <SkillItem>JavaScript</SkillItem>
-          <SkillItem>React</SkillItem>
-          <SkillItem>PHP</SkillItem>
-        </SkillList>
-      </SkillCategory>
-
-      <SkillCategory>
-        <CategoryTitle><FaRobot /> ML / AI / DL</CategoryTitle>
-        <SkillList>
-          <SkillItem>Machine Learning</SkillItem>
-          <SkillItem>Deep Learning</SkillItem>
-          <SkillItem>Artificial Intelligence</SkillItem>
-          <SkillItem>Scikit-learn</SkillItem>
-          <SkillItem>Matplotlib</SkillItem>
-          <SkillItem>Pandas</SkillItem>
-          <SkillItem>Numpy</SkillItem>
-          <SkillItem>Jupyter Notebook</SkillItem>
-          <SkillItem>Seaborn</SkillItem>
-          <SkillItem>Kaggle</SkillItem>
-        </SkillList>
-      </SkillCategory>
-
-      <SkillCategory>
-        <CategoryTitle><FaDatabase /> Database</CategoryTitle>
-        <SkillList>
-          <SkillItem>MySQL</SkillItem>
-          <SkillItem>DBMS</SkillItem>
-        </SkillList>
-      </SkillCategory>
-
-      <SkillCategory>
-        <CategoryTitle><FaLaptopCode /> Systems</CategoryTitle>
-        <SkillList>
-          <SkillItem>Operating Systems</SkillItem>
-          <SkillItem>Computer Networks</SkillItem>
-          <SkillItem>Compiler Design</SkillItem>
-        </SkillList>
-      </SkillCategory>
-
-      <SkillCategory>
-        <CategoryTitle><FaTools /> Tools</CategoryTitle>
-        <SkillList>
-          <SkillItem>Git</SkillItem>
-          <SkillItem>GitHub</SkillItem>
-          <SkillItem>Cisco Packet Tracer</SkillItem>
-          <SkillItem>VS Code</SkillItem>
-        </SkillList>
-      </SkillCategory>
-    </SkillsWrapper>
-  );
-};
+    return (
+      <SkillsWrapper id="skills"> {/* ID added here */}
+        <Title>Technical Skills</Title>
+  
+        <SkillCategory>
+          <CategoryTitle><FaCode /> Programming Languages</CategoryTitle>
+          <SkillList>
+            <SkillItem>C</SkillItem>
+            <SkillItem>C++</SkillItem>
+            <SkillItem>Java</SkillItem>
+            <SkillItem>Python</SkillItem>
+            <SkillItem>Assembly Language</SkillItem>
+          </SkillList>
+        </SkillCategory>
+  
+        <SkillCategory>
+          <CategoryTitle><FaGlobe /> Full Stack Development</CategoryTitle>
+          <SkillList>
+            <SkillItem>HTML</SkillItem>
+            <SkillItem>CSS</SkillItem>
+            <SkillItem>JavaScript</SkillItem>
+            <SkillItem>React</SkillItem>
+            <SkillItem>PHP</SkillItem>
+          </SkillList>
+        </SkillCategory>
+  
+        <SkillCategory>
+          <CategoryTitle><FaRobot /> ML / AI / DL</CategoryTitle>
+          <SkillList>
+            <SkillItem>Scikit-learn</SkillItem>
+            <SkillItem>Matplotlib</SkillItem>
+            <SkillItem>Pandas</SkillItem>
+            <SkillItem>Numpy</SkillItem>
+            <SkillItem>Jupyter Notebook</SkillItem>
+            <SkillItem>Seaborn</SkillItem>
+            <SkillItem>Kaggle</SkillItem>
+          </SkillList>
+        </SkillCategory>
+  
+        <SkillCategory>
+          <CategoryTitle><FaDatabase /> Database</CategoryTitle>
+          <SkillList>
+            <SkillItem>MySQL</SkillItem>
+            <SkillItem>DBMS</SkillItem>
+          </SkillList>
+        </SkillCategory>
+  
+        <SkillCategory>
+          <CategoryTitle><FaLaptopCode /> Systems</CategoryTitle>
+          <SkillList>
+            <SkillItem>Operating Systems</SkillItem>
+            <SkillItem>Computer Networks</SkillItem>
+            <SkillItem>Compiler Design</SkillItem>
+          </SkillList>
+        </SkillCategory>
+  
+        <SkillCategory>
+          <CategoryTitle><FaTools /> Tools</CategoryTitle>
+          <SkillList>
+            <SkillItem>Git</SkillItem>
+            <SkillItem>GitHub</SkillItem>
+            <SkillItem>Cisco Packet Tracer</SkillItem>
+            <SkillItem>VS Code</SkillItem>
+          </SkillList>
+        </SkillCategory>
+      </SkillsWrapper>
+    );
+  };  
 
 export default Skills;

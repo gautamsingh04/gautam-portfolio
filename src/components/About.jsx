@@ -44,7 +44,7 @@ const Links = styled.div`
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Heading>About Me</Heading>
       <Paragraph>
         I'm <strong>Gautam Singh Jyala</strong>, a passionate and dedicated final-year BTech CSE student with a deep interest in software development and system-level programming. I enjoy working on challenging problems and creating meaningful, efficient solutions.

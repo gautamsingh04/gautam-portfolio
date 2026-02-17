@@ -1,16 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import axios from "axios";
 
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
-`;
-
-const float = keyframes`
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
 `;
 
 const HeaderWrapper = styled.header`
@@ -18,27 +13,8 @@ const HeaderWrapper = styled.header`
   color: #FFB085;
   padding: 4rem 2rem;
   text-align: center;
-  position: relative;
   animation: ${fadeIn} 1s ease-out;
   overflow: hidden;
-`;
-
-const FloatingIconLeft = styled.div`
-  position: absolute;
-  left: 2rem;
-  top: 20%;
-  font-size: 3rem;
-  color: #FFB085;
-  animation: ${float} 3s ease-in-out infinite;
-`;
-
-const FloatingIconRight = styled.div`
-  position: absolute;
-  right: 2rem;
-  top: 60%;
-  font-size: 3rem;
-  color: #FFB085;
-  animation: ${float} 3s ease-in-out infinite;
 `;
 
 const Avatar = styled.img`
@@ -50,6 +26,7 @@ const Avatar = styled.img`
   margin-bottom: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
+
   &:hover {
     transform: scale(1.05);
   }
@@ -109,22 +86,76 @@ const ResumeButton = styled.a`
   }
 `;
 
+const StatsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+`;
+
+const StatCard = styled.div`
+  background: #2a2a2a;
+  color: #FFB085;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+`;
+
+const StatNumber = styled.div`
+  font-size: 2rem;
+  font-weight: bold;
+`;
+
+const StatLabel = styled.div`
+  margin-top: 0.5rem;
+  font-size: 1rem;
+`;
+
 const Header = () => {
+  const [repoCount, setRepoCount] = useState(0);
+
+  useEffect(() => {
+    axios.get("https://api.github.com/users/gautamsingh04")
+      .then(res => setRepoCount(res.data.public_repos))
+      .catch(console.error);
+  }, []);
+
   return (
     <HeaderWrapper>
-      <Avatar src={`${process.env.PUBLIC_URL}/profile.jpg`} alt="Gautam Singh Jyala" />
+      <Avatar src={`${process.env.PUBLIC_URL}/photoo.png`} alt="Gautam Singh Jyala" />
       <Name>Gautam Singh Jyala</Name>
-      <Title>BTech CSE 4th Year | Software Developer</Title>
+      <Title>Software Engineer Developer | CSE '26 | Athlete | Exploring...</Title>
       <Tagline>Available for opportunities · Eager to learn · Great learner</Tagline>
       <Icons>
         <a href="https://github.com/gautamsingh04" target="_blank" rel="noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/gautam-singh-jyala-8b33b0276/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="mailto:jyalagautam2.0@gmail.com"><FaEnvelope /></a>
       </Icons>
-      <ResumeButton href="/Gautam_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer">
-  📄 View Resume
-</ResumeButton>
+      <ResumeButton
+        href={`${process.env.PUBLIC_URL}/GautamResumee.pdf`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📄 View Resume
+      </ResumeButton>
 
+      <StatsWrapper>
+        <StatCard>
+          <StatNumber>{repoCount}</StatNumber>
+          <StatLabel>Completed Projects</StatLabel>
+        </StatCard>
+        <StatCard>
+          <StatNumber>2.5+</StatNumber>
+          <StatLabel>Years of Coding Experience</StatLabel>
+        </StatCard>
+        <StatCard>
+          <StatNumber>GenAI LLM</StatNumber>
+          <StatLabel>Current Project</StatLabel>
+        </StatCard>
+      </StatsWrapper>
     </HeaderWrapper>
   );
 };

@@ -77,7 +77,7 @@ const Icons = styled.div`
 
 const Contact = () => {
   return (
-    <Section>
+    <Section id="contact">
       <Heading>Contact Me</Heading>
       <Form
         action="https://formspree.io/f/xwpbwrbz"

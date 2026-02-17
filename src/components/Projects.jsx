@@ -86,6 +86,12 @@ const projects = [
     icon: <FaCogs />,
   },
   {
+    name: "GenAI Crypto Research Assistant (RAG-Based)",
+    desc: "Domain-specific RAG assistant for crypto that combines curated datasets with real-time APIs to cut hallucinations, using ChromaDB + MiniLM for sub-500ms retrieval and a modular FastAPI backend with optional Streamlit UI.",
+    link: "https://github.com/gautamsingh04",
+    icon: <FaCode />,
+  },
+  {
     name: "Hybrid Compiler Interpreter",
     desc: "Custom language that includes a lexer, parser, AST, interpreter, and stack-based VM.",
     link: "https://github.com/gautamsingh04/HYBRID-CI-compiler-Interpreter-",
@@ -113,7 +119,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Section>
+    <Section id="projects">
       <Heading>Projects</Heading>
       <ProjectsGrid>
         {projects.map((proj, i) => (
