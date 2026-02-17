@@ -125,7 +125,7 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <Avatar src={`${process.env.PUBLIC_URL}/photoo.png`} alt="Gautam Singh Jyala" />
+      <Avatar src={`${process.env.PUBLIC_URL}/Photoo.png`} alt="Gautam Singh Jyala" />
       <Name>Gautam Singh Jyala</Name>
       <Title>Software Engineer Developer | CSE '26 | Athlete | Exploring...</Title>
       <Tagline>Available for opportunities · Eager to learn · Great learner</Tagline>
